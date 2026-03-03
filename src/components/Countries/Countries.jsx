@@ -22,11 +22,11 @@ const visitFlagsHandler=(flags)=>{
   const countries = countriesData.countries;
   return (
     <div>
-      <h2>All Countries {countries.length}</h2>
+      <h2>All Countries List {countries.length}</h2>
       <h3>Tottal Visited countries:{countrieVisited.length}</h3>
       <h3>total flags:{visitFlags.length}</h3>
       <div>{
-        visitFlags.map(flag=> <img src={flag} alt="" /> )
+        visitFlags.map((flag,index)=> <img key={index} src={flag} alt="" /> )
         }</div>
       <ol>
  {countrieVisited.map(country=><li>{country.name.common}</li>)
